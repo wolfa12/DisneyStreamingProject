@@ -1,0 +1,143 @@
+html body {
+  margin-top: 100px;
+  padding: 0;
+  background: radial-gradient(circle at -4% -12.9%, rgb(74, 98, 110) 0.3%, rgb(30, 33, 48) 90.2%);
+  color: #CACACA;
+  font-family: 'Tahoma', sans-serif;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 300px;
+  height: auto;
+}
+
+.user-icon img {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+  padding-right: 30px
+}
+
+.banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner video {
+  width: 100%;
+  height: auto;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+.banner div.text-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+
+
+.logo-text {
+  font-size: 24px;
+  color: #fff;
+  margin-left: 10px;
+}
+
+
+#shelves-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 400px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  z-index: 999;
+}
+
+.shelf {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  width: 95%;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  scroll-behavior: smooth;
+  z-index: 999;
+}
+
+.shelf > h2 {
+  position: sticky;
+  top: 0;
+  font-size: 18px;
+  padding: 0px 0px 0px 30px;
+  margin-right: 20px;
+  white-space: nowrap;
+}
+
+.tiles-container {
+  display: flex;
+  padding: 0px 0px 0px 30px;
+  align-items: flex-start;
+}
+
+.tile {
+  flex: 0 0 auto;
+  width: 400px; 
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin: 0 10px;
+  z-index: 999;
+}
+
+.tile:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #000000, 0 0 0 4px #FFFFFF;
+  transform: scale(1.05); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+.tile img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
+
+.tile.fallback {
+  background-color: #333;
+  color: #FFF;
+  max-width: 400px; 
+  min-height: 224px; 
+  border-radius: 8px; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+
