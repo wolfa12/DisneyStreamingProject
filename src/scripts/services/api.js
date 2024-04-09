@@ -7,8 +7,8 @@ export function fetchHomePageData() {
         const promises = homeData.data.StandardCollection.containers.map(set => {
           if (set.set?.setId) {
             resp[set.set.setId] = {
-              "title": set.set.text.title.full.set.default.content,
-              "items": set.set.items
+              'title': set.set.text.title.full.set.default.content,
+              'items': set.set.items
             };
             return Promise.resolve();
           } else {
@@ -16,8 +16,8 @@ export function fetchHomePageData() {
               .then(response => response.json())
               .then(refSetData => {
                 resp[set.set.refId] = {
-                  "title": set.set.text.title.full.set.default.content,
-                  "items": Object.values(refSetData.data)[0]?.items
+                  'title': set.set.text.title.full.set.default.content,
+                  'items': Object.values(refSetData.data)[0]?.items
                 };
               })
               .catch(error => {

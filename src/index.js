@@ -1,7 +1,7 @@
 import Shelf from './scripts/components/Shelf.js';
 import Banner from './scripts/components/Banner.js'
-import { fetchHomePageData } from './scripts/services/index.js';
-import "./styles.css";
+import { fetchHomePageData } from './scripts/services/api.js';
+import './styles.css';
 import './disney_logo.png';
 import './joy_icon.png';
 
@@ -58,7 +58,7 @@ function initKeyboardNavigation() {
     // Scroll to the active shelf if it's not already visible
     const shelf = shelves[activeShelfIndex];
     if (!isElementInViewport(shelf)) {
-      shelf.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      shelf.scrollIntoView({ behavior: 'smooth', block:"center", inline: "nearest"});
     }
   });
 }
@@ -68,9 +68,9 @@ function initKeyboardNavigation() {
 function start() {
   fetchHomePageData()
     .then(data => {
-      console.log("Homepage data: ", data)
+      console.log('Homepage data: ', data)
       Object.entries(data).forEach(([id, shelfData]) => {
-        if (shelfData.title == "New to Disney+"){
+        if (shelfData.title == 'New to Disney+'){
           const banner = new Banner(shelfData)
           document.getElementById('banner-container').appendChild(banner.element);
         }

@@ -3,7 +3,7 @@ export default class Tile {
       const title = tileData?.text?.title.full; 
       this.title = title ? Object.values(title)[0].default.content : '';
 
-      const img = tileData?.image?.tile["1.78"]; 
+      const img = tileData?.image?.tile['1.78']; 
       this.tileImgUrl = img ? Object.values(img)[0].default?.url : undefined;
 
       this.element = this.render();
@@ -37,5 +37,4 @@ render() {
 
   return tileElement;
 }
-
 }

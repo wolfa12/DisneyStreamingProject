@@ -1,8 +1,8 @@
 export default class Banner {
     constructor(bannerData) {
         this.title = bannerData.title;
-        this.img = bannerData.items[0].image.title_treatment_layer["3.91"].series.default.url;
         this.videoUrl = bannerData.items[0].videoArt.length > 0 ? bannerData.items[0].videoArt[0].mediaMetadata?.urls[0].url : null;
+
         this.element = this.render();
     }
 
