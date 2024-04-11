@@ -23,7 +23,7 @@ The following instructions will get you a copy of the project up and running on 
  4. Run `npm run start` - to start a local development server. Open your web browser and navigate to http://localhost:8080
 
 ## Controls
-- ARROW UP/DOWN/LEFT/RIGHT (mimics controller input)
+- Arrow keys: UP/DOWN LEFT/RIGHT (mimics controller input)
 
 ## Future Improvements 
 
