@@ -1,5 +1,7 @@
 # Disney Streaming Project
-Mock Javascript app that resembles the Disney+ Homepage as a takehome assignment for Disney Streaming Living Room Devices.
+Mock Javascript app that resembles the Disney+ Homepage as a takehome assignment for Disney Streaming Living Room Devices. 
+
+Intended for Googl Chrome - https://main--bucolic-cocada-9d28b9.netlify.app/ 
 
 ## Tech Stack
 - Node
@@ -29,6 +31,7 @@ The following instructions will get you a copy of the project up and running on 
 
 - Currently the banner video that is being displayed is the first title in the New to Disney+ shelf, ideally, this wouldn't be hardcoded and more dynamic to either the selected tile or a carousel of various videos from a particular shelf
 - Smooth out the transition of how the web app loads and optimize preloading the video
+- Cleaner responsive design for various sized devices 
 - I had the idea of keeping track of the shelves via ID instead of an index, definitely a more scalable solution
 - Would love to incoporate Typescript
 
