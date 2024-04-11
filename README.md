@@ -28,6 +28,7 @@ The following instructions will get you a copy of the project up and running on 
 ## Future Improvements 
 
 - Currently the banner video that is being displayed is the first title in the New to Disney+ shelf, ideally, this wouldn't be hardcoded and more dynamic to either the selected tile or a carousel of various videos from a particular shelf
+- Smooth out the transition of how the web app loads and optimize preloading the video
 - I had the idea of keeping track of the shelves via ID instead of an index, definitely a more scalable solution
 - Would love to incoporate Typescript
 
