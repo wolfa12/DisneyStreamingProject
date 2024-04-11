@@ -1,7 +1,7 @@
 # Disney Streaming Project
 Mock Javascript app that resembles the Disney+ Homepage as a takehome assignment for Disney Streaming Living Room Devices. 
 
-Intended for Googl Chrome - https://main--bucolic-cocada-9d28b9.netlify.app/ 
+Intended for Google Chrome - https://main--bucolic-cocada-9d28b9.netlify.app/ 
 
 ## Tech Stack
 - Node
