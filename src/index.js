@@ -1,26 +1,26 @@
 import Shelf from './scripts/components/Shelf.js';
-import Banner from './scripts/components/Banner.js'
+import Banner from './scripts/components/Banner.js';
 import { fetchHomePageData } from './scripts/services/api.js';
 import './styles.css';
 import './disney_logo.png';
 import './joy_icon.png';
 
-function isElementInViewport(el) {
-  var rect = el.getBoundingClientRect();
+const isElementInViewport = (el) => {
+  const rect = el.getBoundingClientRect();
   return (
     rect.top >= 0 &&
     rect.left >= 0 &&
     rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
     rect.right <= (window.innerWidth || document.documentElement.clientWidth)
   );
-}
+};
 
-function initKeyboardNavigation() {
+const initKeyboardNavigation = () => {
   let shelves = document.querySelectorAll('.shelf');
   let activeShelfIndex = 0;
   let activeTileIndex = 0;
 
-  function setFocusOnTile() {
+  const setFocusOnTile = () => {
     shelves.forEach((shelf, shelfIndex) => {
       let tiles = shelf.querySelectorAll('.tile');
       tiles.forEach((tile, tileIndex) => {
@@ -29,7 +29,7 @@ function initKeyboardNavigation() {
         }
       });
     });
-  }
+  };
 
   setFocusOnTile(); // Initial focus
 
@@ -58,29 +58,26 @@ function initKeyboardNavigation() {
     // Scroll to the active shelf if it's not already visible
     const shelf = shelves[activeShelfIndex];
     if (!isElementInViewport(shelf)) {
-      shelf.scrollIntoView({ behavior: 'smooth', block:"center", inline: "nearest"});
+      shelf.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
     }
   });
-}
+};
 
-
-
-function start() {
+const start = () => {
   fetchHomePageData()
     .then(data => {
-      console.log('Homepage data: ', data)
+      console.log('Homepage data: ', data);
       Object.entries(data).forEach(([id, shelfData]) => {
-        if (shelfData.title == 'New to Disney+'){
-          const banner = new Banner(shelfData)
+        if (shelfData.title === 'New to Disney+') {
+          const banner = new Banner(shelfData);
           document.getElementById('banner-container').appendChild(banner.element);
         }
         const shelf = new Shelf(id, shelfData);
         document.getElementById('shelves-container').appendChild(shelf.element);
-
       });
       initKeyboardNavigation();
     })
     .catch(error => console.error('Error fetching home page data:', error));
-}
+};
 
 start();

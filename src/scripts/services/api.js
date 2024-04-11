@@ -1,4 +1,4 @@
-export function fetchHomePageData() {
+export const fetchHomePageData = () => {
   return new Promise((resolve, reject) => {
     let resp = {};
     fetch('https://cd-static.bamgrid.com/dp-117731241344/home.json')
@@ -21,7 +21,7 @@ export function fetchHomePageData() {
                 };
               })
               .catch(error => {
-                console.error(`Error fetching data for set ${container.set.refId}:`, error);
+                console.error(`Error fetching data for set ${set.set.refId}:`, error);
                 return Promise.reject(error);
               });
           }
@@ -36,4 +36,4 @@ export function fetchHomePageData() {
         reject(error);
       });
   });
-}
+};

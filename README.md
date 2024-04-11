@@ -23,7 +23,13 @@ The following instructions will get you a copy of the project up and running on 
  4. Run `npm run start` - to start a local development server. Open your web browser and navigate to http://localhost:8080
 
 ## Controls
-- `ARROW UP/DOWN/LEFT/RIGHT` (mimics controller input)
+- ARROW UP/DOWN/LEFT/RIGHT (mimics controller input)
+
+## Future Improvements 
+
+- Currently the banner video that is being displayed is the first title in the New to Disney+ shelf, ideally, this wouldn't be hardcoded and more dynamic to either the selected tile or a carousel of various videos from a particular shelf
+- I had the idea of keeping track of the shelves via ID instead of an index, definitely a more scalable solution
+- Would love to incoporate Typescript
 
 ## Author
 **Anna Wolfe**
